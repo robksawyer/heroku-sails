@@ -1,4 +1,4 @@
-# heroku-sails
+# heroku-sails-pg-test
 
 This is a simple example of getting the new [sails.js](http://sailsjs.com/)
 code running on [heroku](http://www.heroku.com) using [PostgreSQL](http://www.postgresql.org) as its database. 
@@ -7,10 +7,10 @@ code running on [heroku](http://www.heroku.com) using [PostgreSQL](http://www.po
 it supports HTTP and WebSockets. By default, for every controller you create, 
 you get the basic CRUD operations created automatically."
 
-* http://heroku-sails.herokuapp.com/user
-* https://heroku-sails.herokuapp.com/APIKEY/user
-* https://heroku-sails.herokuapp.com/APIKEY/user/create?name=Chad
-* https://heroku-sails.herokuapp.com/APIKEY/user/update/51605c1d9491790200000001?name=Sam
+* http://heroku-sails-pg-test.herokuapp.com/user
+* https://heroku-sails-pg-test.herokuapp.com/APIKEY/user
+* https://heroku-sails-pg-test.herokuapp.com/APIKEY/user/create?name=Chad
+* https://heroku-sails-pg-test.herokuapp.com/APIKEY/user/update/51605c1d9491790200000001?name=Sam
 
 More examples at [sails.js](http://sailsjs.com/).
 
@@ -21,8 +21,8 @@ Could not be easier to setup your own API server using sails.js, node, postgres,
 Short version:  
 
 1. Install sails globally `sudo npm install -g sails`
-1. Create sails folder `sails new heroku-sails`
-1. Add to git: `cd heroku-sails && git init && git add . && git commit`
+1. Create sails folder `sails new heroku-sails-pg-test`
+1. Add to git: `cd heroku-sails-pg-test && git init && git add . && git commit`
 1. Look at the git commit history for other changes made - there's only a few 
 
 If you have not yet, create heroku account and install [heroku toolbelt](https://toolbelt.heroku.com/).
@@ -53,9 +53,15 @@ Note that we what you set here is what is sent in URL.  For more on this authent
 Optionally add papertrail, lets you view logs from a browser:
 
 	$ heroku addons:add papertrail
-	Adding papertrail on heroku-sails... done, v4 (free)
+	Adding papertrail on heroku-sails-pg-test... done, v4 (free)
 	Welcome to Papertrail. Questions and ideas are welcome. Happy logging!
 	Use `heroku addons:docs papertrail` to view documentation.
+
+Open Papertrail and watch the logs:
+
+	$ heroku addons:open papertrail
+	Opening papertrail:choklad for heroku-sails-pg-test... done
+	
 
 Deploy!
 
