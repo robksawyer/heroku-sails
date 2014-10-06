@@ -30,18 +30,16 @@ toolbelt](https://toolbelt.heroku.com/)
 
 Then create a heroku app.  I created `heroku-sails` in the following example:
 
-	$ heroku apps:create heroku-sails
-	Creating heroku-sails... done, region is us
-	http://heroku-sails.herokuapp.com/ | git@heroku.com:heroku-sails.git
+	$ heroku apps:create YOUR-APP-NAME-HERE
+	Creating YOUR-APP-NAME-HERE... done, region is us
+	http://YOUR-APP-NAME-HERE.herokuapp.com/ | git@heroku.com:YOUR-APP-NAME-HERE.git
 	Git remote heroku added
 
 
-Add mongo db 
+Add postgres db. There's a good introduction to PostgreSQL via the article [Getting Started with NodeJS](https://devcenter.heroku.com/articles/getting-started-with-nodejs#provision-a-database)
 
-	$ heroku addons:add mongolab:starter
-	Adding mongolab:starter on heroku-sails... done, v3 (free)
-	Welcome to MongoLab.  Your new database is ready for use.  Please consult the MongoLab Add-on Admin UI for more information and useful management tools.
-	Use `heroku addons:docs mongolab:starter` to view documentation.
+	$ heroku addons:add heroku-postgresql:dev
+	Adding heroku-postgresql:dev... done, v3 (free)
 
 
 Optionally set the api key. If you don't, key check will be skipped and anyone can created/edit.
