@@ -4,6 +4,7 @@
   "description": "A Sails application running on Heroku with PostgreSQL.",
   "main": ".app.js",
   "dependencies": {
+    "pg": "2.x",
     "forever": "*",
     "sails": "0.8.895",
     "sails-postgresql": "^0.10.9"

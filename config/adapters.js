@@ -45,9 +45,10 @@ module.exports.adapters = {
 	// earned it a strong reputation for reliability, data integrity, and correctness.
 	// Learn more: http://www.postgresql.org
 	postgres: {
-		url: process.env.DATABASE_URL,
-		pool: false,
-		ssl: false
+		module 		: 'sails-postgresql',
+		url			: process.env.DATABASE_URL,
+		pool 		: false,
+		ssl 		: false
 	}
 
 };

@@ -16,7 +16,7 @@ More examples at [sails.js](http://sailsjs.com/).
 
 ## Setup
 
-Could not be easier to setup your own API server using sails.js, node, mongodb, and heroku.
+Could not be easier to setup your own API server using sails.js, node, postgres, and heroku.
 
 Short version:  
 
@@ -25,10 +25,9 @@ Short version:
 1. Add to git: `cd heroku-sails && git init && git add . && git commit`
 1. Look at the git commit history for other changes made - there's only a few 
 
-If you have not yet, create heroku account and install [heroku 
-toolbelt](https://toolbelt.heroku.com/)
+If you have not yet, create heroku account and install [heroku toolbelt](https://toolbelt.heroku.com/).
 
-Then create a heroku app.  I created `heroku-sails` in the following example:
+Then create a heroku app. See the following example:
 
 	$ heroku apps:create YOUR-APP-NAME-HERE
 	Creating YOUR-APP-NAME-HERE... done, region is us
@@ -64,9 +63,3 @@ Deploy!
 
 Now view your new app in your browser.
 
-## Contact
-
-For questions or custom work, please contact chad@chadnorwood.com
-
-
-[![githalytics.com alpha](https://cruel-carlota.pagodabox.com/4931c91b33d5ace57a560b8603f28f16 "githalytics.com")](http://githalytics.com/chadn/heroku-sails)
