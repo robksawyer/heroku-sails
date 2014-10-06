@@ -82,6 +82,21 @@ module.exports.connections = {
     database: 'YOUR_POSTGRES_DB'
   }
 
+  /***************************************************************************
+  *                                                                          *
+  * PostgreSQL is another officially supported relational database.          *
+  * http://en.wikipedia.org/wiki/PostgreSQL                                  *
+  *                                                                          *
+  * Run: npm install sails-postgresql                                        *
+  *                                                                          *
+  *                                                                          *
+  ***************************************************************************/
+  herokuPostgresqlServer: {
+    adapter: 'sails-postgresql',
+    url: process.env.DATABASE_URL,
+    pool: false,
+    ssl: false
+  }
 
   /***************************************************************************
   *                                                                          *
