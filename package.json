@@ -1,22 +1,26 @@
 {
-    "name": "heroku-sails",
-    "version": "0.0.1",
-    "description": "a Sails application running on Heroku",
-    "main": ".app.js",
-    "dependencies": {
-        "sails": "0.8.895"
-    },
-    "scripts": {
-        "start": "node .app.js",
-        "debug": "node debug .app.js"
-    },
-    "engines": {
-      "node": "0.8.x"
-    },
-    "repository": {
-      "type": "git",
-      "url": "git://github.com/chadn/heroku-sails.git"
-    },
-    "author": "Chad Norwood <chad@chadnorwood.com>",
-    "license": "MIT"
+  "name": "heroku-sails",
+  "version": "0.0.1",
+  "description": "A Sails application running on Heroku with PostgreSQL.",
+  "main": ".app.js",
+  "dependencies": {
+    "forever": "*",
+    "sails": "0.8.895",
+    "sails-postgresql": "^0.10.9"
+  },
+  "scripts": {
+    "start": "node .app.js",
+    "debug": "node debug .app.js"
+  },
+  "engines": {
+    "node": ">=0.10.x"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/robksawyer/heroku-sails.git"
+  },
+  "author": "Rob Sawyer <robksawyer@gmail.com>",
+  "license": "MIT",
+  "devDependencies": {
+  }
 }

@@ -1,7 +1,7 @@
 # heroku-sails
 
 This is a simple example of getting the new [sails.js](http://sailsjs.com/)
-code running on heroku using mongodb as its database. 
+code running on [heroku](http://www.heroku.com) using [PostgreSQL](http://www.postgresql.org) as its database and [GruntJS](http://gruntjs.com) as the task runner. 
 
 "Sails automatically builds a RESTful JSON API for your models. And here's the thing,
 it supports HTTP and WebSockets. By default, for every controller you create, 

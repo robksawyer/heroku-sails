@@ -5,7 +5,7 @@ module.exports.adapters = {
 
 	// If you leave the adapter config unspecified 
 	// in a model definition, 'default' will be used.
-	'default': 'mongo',
+	'default': 'postgres',
 	
 	mongo: {
 		module   : 'sails-mongo',
@@ -38,5 +38,16 @@ module.exports.adapters = {
 		user		: 'YOUR_MYSQL_USER',
 		password	: 'YOUR_MYSQL_PASSWORD',
 		database	: 'YOUR_MYSQL_DB'
+	},
+
+	// PostgreSQL is a powerful, open source object-relational database system. 
+	// It has more than 15 years of active development and a proven architecture that has 
+	// earned it a strong reputation for reliability, data integrity, and correctness.
+	// Learn more: http://www.postgresql.org
+	postgres: {
+		url: process.env.DATABASE_URL,
+		pool: false,
+		ssl: false
 	}
+
 };

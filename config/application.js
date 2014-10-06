@@ -4,7 +4,7 @@ var authenKey = require('../lib/authenKey');
 module.exports = {
 	
 	// Name of the application (used as default <title>)
-	appName: "Chad Sails Application",
+	appName: "Sample Sails Application",
 
 	// Port this Sails application will live on
 	port: process.env.PORT || 1337,

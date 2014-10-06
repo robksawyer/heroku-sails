@@ -11,6 +11,7 @@
 # node.js / npm
 ########################
 lib-cov
+node_modules
 *.seed
 *.log
 *.csv
