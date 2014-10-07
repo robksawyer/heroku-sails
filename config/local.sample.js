@@ -80,29 +80,6 @@ module.exports = {
    * 'development' environment.                                              *
    ***************************************************************************/
 
-    environment: process.env.NODE_ENV || 'development',
-
-    /***************************************************************************
-   * Local connection details                                                *
-   ***************************************************************************/
-    connections: {
-
-        /***************************************************************************
-        *                                                                          *
-        * PostgreSQL is another officially supported relational database.          *
-        * http://en.wikipedia.org/wiki/PostgreSQL                                  *
-        *                                                                          *
-        * Run: npm install sails-postgresql                                        *
-        *                                                                          *
-        *                                                                          *
-        ***************************************************************************/
-        localPostgresqlServer: {
-          adapter: 'sails-postgresql',
-          host: '127.0.0.1',
-          user: 'some_postgres_user',
-          password: 'my_postgres_password',
-          database: 'sails'
-        },
-    }
+    //environment: process.env.NODE_ENV || 'development'
 
 };

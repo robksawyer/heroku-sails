@@ -80,7 +80,16 @@ module.exports.connections = {
     pool: false,
     ssl: true,
     schema: true //This makes sure that sails matches the database schema to your models.
-  }
+  },
+
+  localPostgresqlServer: {
+    adapter: 'sails-postgresql',
+    host: 'localhost',
+    user: 'sails_user',
+    password: 'sails_user_pass',
+    database: 'sails',
+    schema: true //This makes sure that sails matches the database schema to your models.
+  },
 
   /***************************************************************************
   *                                                                          *
