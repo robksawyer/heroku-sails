@@ -77,8 +77,8 @@ module.exports.connections = {
   herokuPostgresqlServer: {
     adapter: 'sails-postgresql',
     url: process.env.DATABASE_URL,
-    pool: false,
-    ssl: true
+    ssl: true,
+    schema: true
   },
 
   localPostgresqlServer: {
@@ -86,7 +86,8 @@ module.exports.connections = {
     host: 'localhost',
     user: 'sails_user',
     password: 'sails_user_pass',
-    database: 'sails'
+    database: 'sails',
+    schema: true
   },
 
   /***************************************************************************
