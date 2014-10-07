@@ -61,11 +61,22 @@ Open Papertrail and watch the logs:
 
 	$ heroku addons:open papertrail
 	Opening papertrail:choklad for heroku-sails-pg-test... done
-	
+
 
 Deploy!
 
 	$ git push heroku master
 
 Now view your new app in your browser.
+
+
+## Local Setup 
+
+Short version:  
+
+1. Install dependencies via `npm install`
+1. You'll need to install PostgreSQL. There are various ways – google it. I used homebrew.
+1. Navigate to the config folder and rename `local.sample.js` to `local.js`
+1. Update the database information.
+1. Run the command `sails lift` and have fun building your app.
 
