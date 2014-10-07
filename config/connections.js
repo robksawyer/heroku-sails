@@ -77,6 +77,7 @@ module.exports.connections = {
   herokuPostgresqlServer: {
     adapter: 'sails-postgresql',
     url: process.env.DATABASE_URL,
+    schema: true, //This makes sure that sails matches the database schema to your models.
     pool: false,
     ssl: false
   }

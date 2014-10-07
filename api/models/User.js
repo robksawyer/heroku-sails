@@ -8,7 +8,13 @@
 module.exports = {
 
   attributes: {
-
+  	name: 'string',
+  	email: 'string',
+  	wishlist: {
+  		collection: 'product',
+  		via: 'wishlistedBy',
+  		dominant: true
+  	}
   }
 };
 
