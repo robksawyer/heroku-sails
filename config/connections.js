@@ -79,7 +79,7 @@ module.exports.connections = {
     url: process.env.DATABASE_URL,
     pool: false,
     ssl: true,
-    //schema: true //This makes sure that sails matches the database schema to your models.
+    schema: true //This makes sure that sails matches the database schema to your models.
   }
 
   /***************************************************************************
