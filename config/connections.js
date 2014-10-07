@@ -89,3 +89,5 @@ module.exports.connections = {
   ***************************************************************************/
 
 };
+
+sails.log.warn(process.env.DATABASE_URL);
