@@ -87,7 +87,6 @@ module.exports.connections = {
   * More adapters: https://github.com/balderdashy/sails                      *
   *                                                                          *
   ***************************************************************************/
-
+  
 };
 
-sails.log.warn(process.env.DATABASE_URL);
