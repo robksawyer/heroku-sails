@@ -94,10 +94,11 @@ You can use something like the following to generate a dump.
 
 `PGPASSWORD=my-user-pass pg_dump -Fc --no-acl --no-owner -h localhost -U myuser my-db-name > dumps/mydb_v1.dump`
 
-You'll then need to get the dump to https accesible location. I ended up trying to use Dropbox to store my .dump file. IF you decide to do the same, you may run into the following error. I even tried copying the download link via the Download button and it still didn't work. It looks like AWS is the way to go. I tried only online sharing services as well. 
+You'll then need to get the dump to https accesible location. I ended up trying to use Dropbox to store my .dump file. IF you decide to do the same, you may run into the following error. 
 
 `Invalid dump format: /tmp/KBzKLiVhfW/sails_db.dump: HTML document text`
 
+The solution to this was to replace `http://www.dropbox.com/` with `https://dl.dropboxusercontent.com/` in the URL.
 
 You can then use something like the following to migrate/restore the database.
 
