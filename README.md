@@ -104,5 +104,8 @@ You can then use something like the following to migrate/restore the database.
 
 `heroku pgbackups:restore DATABASE 'https://dl-web.dropbox.com/get/Uploads/my_db.dump?_subject_uid=UNIQUECODE&dl=1' --confirm your-app-name-here`
 
+You can find general PostgreSQL Heroku details at [Heroku Postgres](https://devcenter.heroku.com/articles/heroku-postgresql). And you can [read more about PG Backups here](https://devcenter.heroku.com/articles/pgbackups).
+
+
 
 
