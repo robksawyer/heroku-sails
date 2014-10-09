@@ -79,6 +79,7 @@ Short version:
 1. Navigate to the config folder and rename `local.sample.js` to `local.js`
 1. Update the database information.
 1. Run the command `sails lift` and have fun building your app.
+1. Tired of restarting your app? Check out the article [Sails.js, sick of restarting your server ?](https://coderwall.com/p/njcr7w).
 
 ## Database
 

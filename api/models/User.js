@@ -17,9 +17,7 @@ module.exports = {
   		collection: 'product',
   		via: 'wishlistedBy',
   		dominant: true
-  	},
-  	autoCreatedAt: true,
-  	autoUpdatedAt: true
+  	}
   }
 };
 
