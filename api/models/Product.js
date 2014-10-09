@@ -12,7 +12,9 @@ module.exports = {
   	wishlistedBy: {
   		collection: 'user',
   		via: 'wishlist'
-  	}
+  	},
+  	autoCreatedAt: true,
+  	autoUpdatedAt: true
   }
 };
 

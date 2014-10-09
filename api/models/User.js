@@ -9,12 +9,17 @@ module.exports = {
 
   attributes: {
   	name: 'string',
-  	email: 'string',
+  	email: {
+  		type: 'string',
+  		unique: true
+  	},
   	wishlist: {
   		collection: 'product',
   		via: 'wishlistedBy',
   		dominant: true
-  	}
+  	},
+  	autoCreatedAt: true,
+  	autoUpdatedAt: true
   }
 };
 
