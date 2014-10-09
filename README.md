@@ -82,19 +82,26 @@ Short version:
 
 ## Database
 
-As mentioned above, the database being used is PostgreSQL. And well, if you've been testing locally, you're likely wondering how to get the local database info schema up to Heroku. Well I'm glad you asked. Heroku explains the process at [Importing and Exporting Heroku Postgres Databases with PG Backups](https://devcenter.heroku.com/articles/heroku-postgres-import-export). I ended up using Dropbox to store my .dump file. IF you decide to do the same, you may run into the following error.
-
-`Invalid dump format: /tmp/KBzKLiVhfW/sails_db.dump: HTML document text`
-
-If you do, it's likely that the link is redirecting to an HTML file as opposed to the actual raw file. After some battling and googling, I realize that you could can copy the download link of the file in Dropbox. I'm talking specifically using "Copy link as" on the Download button when you select the file in the Dropbox web browser.
+As mentioned above, the database being used is PostgreSQL. And well, if you've been testing locally, you're likely wondering how to get the local database info schema up to Heroku. Well I'm glad you asked. Heroku explains the process at [Importing and Exporting Heroku Postgres Databases with PG Backups](https://devcenter.heroku.com/articles/heroku-postgres-import-export). 
 
 You'll also need to make sure that you install pg_backups.
 
 	!    Please add the pgbackups addon first via:
  	!    heroku addons:add pgbackups
 
-You can use something like:
+
+You can use something like the following to generate a dump.
+
+`PGPASSWORD=my-user-pass pg_dump -Fc --no-acl --no-owner -h localhost -U myuser my-db-name > dumps/mydb_v1.dump`
+
+You'll then need to get the dump to https accesible location. I ended up trying to use Dropbox to store my .dump file. IF you decide to do the same, you may run into the following error. I even tried copying the download link via the Download button and it still didn't work. It looks like AWS is the way to go. I tried only online sharing services as well. 
+
+`Invalid dump format: /tmp/KBzKLiVhfW/sails_db.dump: HTML document text`
+
+
+You can then use something like the following to migrate/restore the database.
 
 `heroku pgbackups:restore DATABASE 'https://dl-web.dropbox.com/get/Uploads/my_db.dump?_subject_uid=UNIQUECODE&dl=1' --confirm your-app-name-here`
+
 
 
