@@ -80,3 +80,21 @@ Short version:
 1. Update the database information.
 1. Run the command `sails lift` and have fun building your app.
 
+## Database
+
+As mentioned above, the database being used is PostgreSQL. And well, if you've been testing locally, you're likely wondering how to get the local database info schema up to Heroku. Well I'm glad you asked. Heroku explains the process at [Importing and Exporting Heroku Postgres Databases with PG Backups](https://devcenter.heroku.com/articles/heroku-postgres-import-export). I ended up using Dropbox to store my .dump file. IF you decide to do the same, you may run into the following error.
+
+`Invalid dump format: /tmp/KBzKLiVhfW/sails_db.dump: HTML document text`
+
+If you do, it's likely that the link is redirecting to an HTML file as opposed to the actual raw file. After some battling and googling, I realize that you could can copy the download link of the file in Dropbox. I'm talking specifically using "Copy link as" on the Download button when you select the file in the Dropbox web browser.
+
+You'll also need to make sure that you install pg_backups.
+
+	!    Please add the pgbackups addon first via:
+ 	!    heroku addons:add pgbackups
+
+You can use something like:
+
+`heroku pgbackups:restore DATABASE 'https://dl-web.dropbox.com/get/Uploads/my_db.dump?_subject_uid=UNIQUECODE&dl=1' --confirm your-app-name-here`
+
+
